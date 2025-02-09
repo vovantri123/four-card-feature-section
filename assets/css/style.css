@@ -1,0 +1,147 @@
+html {
+    font-size: calc(0.56 * 16px);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-size: 1.5rem; /* 15px */
+    line-height: 1.5;
+}
+body {   
+    background-color: hsl(0, 0%, 98%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-container{  
+    padding: 20px 40px ; 
+    width: 400px;
+}
+
+.feature-title{
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.slogan{
+    color: hsl(234, 12%, 34%);
+    font-size: 2.4rem;
+}
+
+.power-by{ 
+    font-weight: 600;
+    font-size: 2.4rem;
+    
+}
+
+.feature-description{
+    color: hsl(229, 6%, 66%);
+    margin-top: 20px;
+}
+
+.cards-container{
+    
+}
+
+.card-container{
+    box-shadow: 0 4px 8px 0 rgba(85, 163, 186, 0.186), 0 6px 15px 0 rgba(85, 162, 186, 0.186);
+    margin-bottom: 18px;
+    padding: 30px;
+    border-radius: 6px;
+   
+}
+
+.card-name{
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-description{
+    color: hsl(229, 6%, 66%);
+    font-size: 1.4rem;
+
+}
+
+.card-img{
+    display: block;
+    margin-left: auto; 
+    /* 2 cái này cho hình qua phải (Hay) */ 
+    margin-top: 40px;
+}
+
+.supervisor{
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.team-builder{
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.karma{
+    border-top: 5px solid  hsl(34, 97%, 64%);
+}
+
+.calculator{
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 48em){ 
+    html {
+        font-size: calc(0.625 * 16px);
+    }
+
+    .feature-container{  
+        width: 100%; 
+    } 
+
+    .cards-container{
+        display: grid; 
+        grid-template-areas:
+        ". top ."
+        "left top right"
+        "left bottom right"
+        ". bottom .";
+        grid-template-columns: 1fr 1fr 1fr; 
+  
+        gap: 40px
+        /* background-color: aqua; */
+    }
+
+    .supervisor{
+        grid-area: left;
+    }
+    
+    .team-builder{
+        grid-area: top;
+        margin-bottom: 0;
+    }
+    
+    .karma{
+        grid-area: bottom;
+       
+    }
+    
+    .calculator{
+        grid-area: right;
+    }
+
+    .feature-description{
+        width: 500px;
+        display: inline-block;
+    }
+}
